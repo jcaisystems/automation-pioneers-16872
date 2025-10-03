@@ -5,24 +5,24 @@ import { ValueStack } from "@/components/ValueStack";
 import { WhyFree } from "@/components/WhyFree";
 import { SocialProof } from "@/components/SocialProof";
 import { LeadMagnet } from "@/components/LeadMagnet";
+import { SignupForm } from "@/components/SignupForm";
 import { Footer } from "@/components/Footer";
-import { AutomationAudit } from "@/components/AutomationAudit";
-import { PainAgitation } from "@/components/PainAgitation";
+import { RoiCalculator } from "@/components/RoiCalculator";
 
 const Index = () => {
-  const [showAudit, setShowAudit] = useState(false);
+  const [showForm, setShowForm] = useState(false);
 
   return (
     <main className="min-h-screen">
-      <Hero onGetStarted={() => setShowAudit(true)} />
-      <PainAgitation />
-      <ValueStack onGetStarted={() => setShowAudit(true)} />
+      <Hero onGetStarted={() => setShowForm(true)} />
+      <ValueStack onGetStarted={() => setShowForm(true)} />
+      <RoiCalculator />
       <WhyFree />
       <SocialProof />
-      <LeadMagnet onGetStarted={() => setShowAudit(true)} />
+      <LeadMagnet onGetStarted={() => setShowForm(true)} />
       <Footer />
       
-      {showAudit && <AutomationAudit onClose={() => setShowAudit(false)} />}
+      {showForm && <SignupForm onClose={() => setShowForm(false)} />}
     </main>
   );
 };
