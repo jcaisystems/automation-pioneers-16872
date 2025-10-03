@@ -59,34 +59,6 @@ export const WhyFree = () => {
             </Card>
           ))}
         </div>
-
-        <div className="max-w-4xl mx-auto">
-          <Card className="p-8 md:p-12 bg-gradient-to-br from-card to-card/50 border-primary/30">
-            <h3 className="text-3xl font-bold mb-6 text-center">What Makes This Unrivalled</h3>
-            <div className="space-y-4 text-lg text-muted-foreground">
-              <p className="leading-relaxed">
-                <span className="text-foreground font-semibold">Imagine:</span>
-              </p>
-              <ul className="space-y-3 ml-6">
-                <li className="flex items-start gap-3">
-                  <span className="text-primary text-2xl">•</span>
-                  <span>No more patchwork automations that break</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-primary text-2xl">•</span>
-                  <span>Your team doing higher-leverage work instead of grunt tasks</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-primary text-2xl">•</span>
-                  <span>You having room to breathe — to strategize, focus on growth, live life</span>
-                </li>
-              </ul>
-              <p className="leading-relaxed text-foreground font-semibold mt-6 text-center text-xl">
-                That's what this blueprint delivers.
-              </p>
-            </div>
-          </Card>
-        </div>
       </div>
     </section>
   );
