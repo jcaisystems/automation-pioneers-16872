@@ -30,26 +30,17 @@ export const SocialProof = () => {
   ];
 
   return (
-    <section id="proof" className="py-24 bg-secondary/30 relative overflow-hidden">
-      {/* Subtle grid */}
-      <div className="absolute inset-0 opacity-10" style={{
-        backgroundImage: 'linear-gradient(rgba(0,191,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,191,255,0.1) 1px, transparent 1px)',
-        backgroundSize: '30px 30px'
-      }} />
-      
+    <section id="proof" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Real Businesses.
             <span className="gradient-text"> Real Results.</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
-            These aren't hypothetical case studies. These are founders who stopped managing and started scaling.
-          </p>
         </div>
         
         {/* Stats */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
+        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
           {stats.map((stat, index) => (
             <Card 
               key={index}
@@ -64,19 +55,19 @@ export const SocialProof = () => {
         </div>
         
         {/* Testimonials */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
-              className="p-8 bg-gradient-to-br from-card to-card/50 border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 animate-slide-up"
+              className="p-6 bg-gradient-to-br from-card to-card/50 border-border hover:border-primary/50 transition-all duration-300 animate-slide-up"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <Quote className="w-8 h-8 text-primary mb-4" />
-              <p className="text-foreground mb-6 leading-relaxed italic">"{testimonial.quote}"</p>
-              <div className="border-t border-border pt-4">
-                <div className="font-semibold text-foreground">{testimonial.author}</div>
-                <div className="text-sm text-muted-foreground mb-3">{testimonial.role}</div>
-                <div className="bg-primary/10 border border-primary/30 rounded-lg px-3 py-1 inline-block">
+              <Quote className="w-6 h-6 text-primary mb-3" />
+              <p className="text-foreground mb-4 leading-relaxed text-sm italic">"{testimonial.quote}"</p>
+              <div className="border-t border-border pt-3">
+                <div className="font-semibold text-foreground text-sm">{testimonial.author}</div>
+                <div className="text-xs text-muted-foreground mb-2">{testimonial.role}</div>
+                <div className="bg-primary/10 border border-primary/30 rounded px-2 py-1 inline-block">
                   <span className="text-primary font-semibold text-xs">{testimonial.metric}</span>
                 </div>
               </div>

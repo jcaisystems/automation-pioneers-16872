@@ -44,13 +44,16 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
           </h1>
           
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-foreground mb-4 max-w-3xl mx-auto leading-relaxed font-semibold">
-            The "Automation Freedom Blueprint" — Yours 100% Free
+          <p className="text-2xl md:text-3xl text-foreground mb-4 max-w-3xl mx-auto leading-tight font-bold">
+            The "Automation Freedom Blueprint"
+          </p>
+          <p className="text-xl md:text-2xl text-primary mb-8 max-w-3xl mx-auto font-semibold">
+            Yours 100% Free (Yes, Free)
           </p>
           
           {/* Value prop */}
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Zero fluff. Zero risk. Just a fully custom automation roadmap showing exactly where you lose time & how to stop it.
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+            A fully custom automation roadmap showing exactly where you lose time & how to stop it.
           </p>
           
           {/* CTA Buttons */}
@@ -59,13 +62,16 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
               variant="hero" 
               size="xl"
               onClick={onGetStarted}
-              className="group text-xl px-16 h-16"
+              className="group text-xl px-16 h-16 animate-glow-pulse"
             >
               Claim Your Free Blueprint Now
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <p className="text-sm text-muted-foreground">
-              Spaces are limited — we can't deliver custom roadmaps to everyone
+            <p className="text-sm text-destructive font-semibold">
+              ⚠️ Limited to 20 blueprints per month — spots filling fast
+            </p>
+            <p className="text-xs text-muted-foreground">
+              No contracts • No credit cards • No commitments
             </p>
           </div>
           
