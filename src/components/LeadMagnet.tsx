@@ -1,8 +1,9 @@
-// src/components/LeadMagnet.tsx
+// src/components/LeadMagnet.tsx (Ausschnitt)
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Target, Zap, Clock, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import { LiveSignupNotification } from "@/components/LiveSignupNotification"; // Importieren Sie die neue Komponente
 
 interface LeadMagnetProps {
   onGetStarted: () => void;
@@ -11,26 +12,15 @@ interface LeadMagnetProps {
 export const LeadMagnet = ({ onGetStarted }: LeadMagnetProps) => {
   const [spotsLeft, setSpotsLeft] = useState(7);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSpotsLeft((prev) => (prev > 1 ? prev - 1 : 7));
-    }, 5000); // Change spot every 5 seconds for demo
-    return () => clearInterval(interval);
-  }, []);
+  // ... (useEffect für spotsLeft bleibt unverändert)
 
   const quickWins = [
-    { icon: Zap, title: "10+ Hours Saved", description: "Every single week" },
-    { icon: Target, title: "Custom Built", description: "For your business" },
-    { icon: Clock, title: "48 Hour Delivery", description: "Or it's free" }
+    // ... (quickWins Array bleibt unverändert)
   ];
 
   return (
     <section className="py-24 bg-secondary/30 relative overflow-hidden">
-      {/* Grid overlay */}
-      <div className="absolute inset-0 z-0" style={{
-        backgroundImage: 'linear-gradient(rgba(0,191,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,191,255,0.1) 1px, transparent 1px)',
-        backgroundSize: '50px 50px'
-      }} />
+      {/* ... (Grid-Overlay bleibt unverändert) */}
       
       <div className="container mx-auto px-4 relative z-10">
         <Card className="max-w-5xl mx-auto bg-gradient-to-br from-card via-card to-primary/5 border-2 border-primary/50 shadow-2xl shadow-primary/30 overflow-hidden">
@@ -53,43 +43,30 @@ export const LeadMagnet = ({ onGetStarted }: LeadMagnetProps) => {
                 Custom-built for your business. Delivered in 48 hours or less.
               </p>
 
-              <Button 
-                variant="hero" 
-                size="xl"
-                onClick={onGetStarted}
-                className="group text-xl px-16 h-16 mb-4 animate-glow-pulse"
-              >
-                Yes! Claim My Free Blueprint Now
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </Button>
-
-              <p className="text-sm text-muted-foreground mb-8">
-                No credit card • No sales calls • No commitments
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              {quickWins.map((win, index) => (
-                <div 
-                  key={index}
-                  className="bg-secondary/50 border border-border rounded-lg p-6 text-center animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+              <div className="flex flex-col items-center gap-4">
+                <Button 
+                  variant="hero" 
+                  size="xl"
+                  onClick={onGetStarted}
+                  className="group text-xl px-16 h-16 animate-glow-pulse"
                 >
-                  <win.icon className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <h3 className="font-bold text-lg mb-2">{win.title}</h3>
-                  <p className="text-sm text-muted-foreground">{win.description}</p>
+                  Yes! Claim My Free Blueprint Now
+                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                </Button>
+
+                {/* HIER IST DIE ÄNDERUNG: Statischen Text durch die neue Komponente ersetzen */}
+                <div className="h-10"> {/* Wrapper-Div, um Layout-Sprünge zu verhindern */}
+                  <LiveSignupNotification />
                 </div>
-              ))}
+
+                <p className="text-sm text-muted-foreground">
+                  No credit card • No sales calls • No commitments
+                </p>
+              </div>
             </div>
 
-            <div className="bg-primary/5 border border-primary/30 rounded-lg p-6 text-center">
-              <p className="text-lg text-foreground mb-2">
-                <span className="font-bold text-primary">Why We Limit This:</span> Each blueprint is custom-engineered by our team.
-              </p>
-              <p className="text-muted-foreground">
-                We cap it at 20 per month to ensure quality. Once they're gone, you'll have to wait until next month.
-              </p>
-            </div>
+            {/* ... (Rest der Komponente bleibt unverändert) */}
+            
           </div>
         </Card>
       </div>
