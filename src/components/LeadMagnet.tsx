@@ -1,12 +1,23 @@
+// src/components/LeadMagnet.tsx
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Target, Zap, Clock, ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
 interface LeadMagnetProps {
   onGetStarted: () => void;
 }
 
 export const LeadMagnet = ({ onGetStarted }: LeadMagnetProps) => {
+  const [spotsLeft, setSpotsLeft] = useState(7);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSpotsLeft((prev) => (prev > 1 ? prev - 1 : 7));
+    }, 5000); // Change spot every 5 seconds for demo
+    return () => clearInterval(interval);
+  }, []);
+
   const quickWins = [
     { icon: Zap, title: "10+ Hours Saved", description: "Every single week" },
     { icon: Target, title: "Custom Built", description: "For your business" },
@@ -27,7 +38,7 @@ export const LeadMagnet = ({ onGetStarted }: LeadMagnetProps) => {
             <div className="text-center mb-8">
               <div className="inline-flex items-center gap-2 bg-destructive/20 border border-destructive/50 rounded-full px-4 py-2 mb-6 animate-glow-pulse">
                 <Target className="w-4 h-4 text-destructive" />
-                <span className="text-sm font-medium text-destructive">⚠️ Only 7 Spots Left This Month</span>
+                <span className="text-sm font-medium text-destructive">Only {spotsLeft} Spots Left This Month</span>
               </div>
               
               <h2 className="text-4xl md:text-6xl font-bold mb-6">
@@ -76,7 +87,7 @@ export const LeadMagnet = ({ onGetStarted }: LeadMagnetProps) => {
                 <span className="font-bold text-primary">Why We Limit This:</span> Each blueprint is custom-engineered by our team.
               </p>
               <p className="text-muted-foreground">
-                We cap it at 20 per month to ensure quality. Once they're gone, you'll wait until next month.
+                We cap it at 20 per month to ensure quality. Once they're gone, you'll have to wait until next month.
               </p>
             </div>
           </div>
