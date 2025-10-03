@@ -1,3 +1,4 @@
+// src/components/Hero.tsx
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -38,22 +39,12 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
           
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-            Unlock 10+ Hours
-            <br />
-            <span className="gradient-text">of Your Life. Weekly.</span>
+            The Agency Founder's Bottleneck Eliminator: Get Your Custom 3-Step Automation Plan in Under 60 Seconds.
           </h1>
           
           {/* Subheadline */}
-          <p className="text-2xl md:text-3xl text-foreground mb-4 max-w-3xl mx-auto leading-tight font-bold">
-            The "Automation Freedom Blueprint"
-          </p>
-          <p className="text-xl md:text-2xl text-primary mb-8 max-w-3xl mx-auto font-semibold">
-            Yours 100% Free (Yes, Free)
-          </p>
-          
-          {/* Value prop */}
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            A fully custom automation roadmap showing exactly where you lose time & how to stop it.
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+            Stop wasting 30+ hours a week on manual tasks. Our free AI audit instantly pinpoints your most expensive inefficiency and shows you exactly how to fix it.
           </p>
           
           {/* CTA Buttons */}
@@ -64,31 +55,12 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
               onClick={onGetStarted}
               className="group text-xl px-16 h-16 animate-glow-pulse"
             >
-              Claim Your Free Blueprint Now
+              Start My Free Audit
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <p className="text-sm text-destructive font-semibold">
-              ⚠️ Limited to 20 blueprints per month — spots filling fast
+            <p className="text-sm text-muted-foreground">
+              Trusted by leaders at [Client Logo 1] [Client Logo 2] [Client Logo 3]
             </p>
-            <p className="text-xs text-muted-foreground">
-              No contracts • No credit cards • No commitments
-            </p>
-          </div>
-          
-          {/* Trust indicators */}
-          <div className="mt-16 flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span>No Contracts</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span>No Credit Cards</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span>No Commitments</span>
-            </div>
           </div>
         </div>
       </div>
