@@ -38,56 +38,50 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
           
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-            Stop Managing.
+            Unlock 10+ Hours
             <br />
-            <span className="gradient-text">Start Scaling.</span>
+            <span className="gradient-text">of Your Life. Weekly.</span>
           </h1>
           
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto leading-relaxed">
-            While your competitors drown in operational chaos, you'll have a custom AI operating system running your entire business autonomously.
+          <p className="text-xl md:text-2xl text-foreground mb-4 max-w-3xl mx-auto leading-relaxed font-semibold">
+            The "Automation Freedom Blueprint" — Yours 100% Free
           </p>
           
           {/* Value prop */}
-          <p className="text-lg md:text-xl text-primary font-semibold mb-12">
-            Get your complete automation blueprint—$10,000 value—absolutely free.
+          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+            Zero fluff. Zero risk. Just a fully custom automation roadmap showing exactly where you lose time & how to stop it.
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col gap-4 justify-center items-center">
             <Button 
               variant="hero" 
               size="xl"
               onClick={onGetStarted}
-              className="group"
+              className="group text-xl px-16 h-16"
             >
-              Get Your Free Automation Plan
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              Claim Your Free Blueprint Now
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button 
-              variant="outline" 
-              size="xl"
-              onClick={() => {
-                document.getElementById('proof')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              See Real Results
-            </Button>
+            <p className="text-sm text-muted-foreground">
+              Spaces are limited — we can't deliver custom roadmaps to everyone
+            </p>
           </div>
           
           {/* Trust indicators */}
           <div className="mt-16 flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span>No Credit Card Required</span>
+              <span>No Contracts</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span>No Sales Call Needed</span>
+              <span>No Credit Cards</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span>Ready in 48 Hours</span>
+              <span>No Commitments</span>
             </div>
           </div>
         </div>

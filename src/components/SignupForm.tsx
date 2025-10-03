@@ -65,10 +65,10 @@ export const SignupForm = ({ onClose }: SignupFormProps) => {
             
             <h2 className="text-3xl md:text-4xl font-bold mb-3">
               Claim Your Free
-              <span className="gradient-text"> Automation Blueprint</span>
+              <span className="gradient-text"> Automation Freedom Blueprint</span>
             </h2>
             <p className="text-muted-foreground">
-              Tell us about your business and we'll create a custom automation roadmap worth $10,000—delivered in 48 hours.
+              Tell us about your business and we'll create a custom automation roadmap—delivered in 48 hours. No strings attached.
             </p>
           </div>
 

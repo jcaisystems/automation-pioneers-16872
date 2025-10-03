@@ -8,12 +8,18 @@ interface LeadMagnetProps {
 
 export const LeadMagnet = ({ onGetStarted }: LeadMagnetProps) => {
   const included = [
-    "Complete automation opportunity mapping",
-    "Custom AI solution blueprint for your business",
-    "ROI projection and implementation timeline",
-    "Priority bottleneck analysis",
-    "Technology stack recommendations",
-    "No sales pitch—just pure value"
+    "A fully custom automation roadmap built for your business",
+    "The top 3 high-impact automations you can implement in the next 30 days (with plug-and-play templates)",
+    "A crystal-clear step-by-step execution plan — no guesswork, no overwhelm",
+    "A side-by-side Time ROI calculator showing exactly how many hours and dollars you'll save",
+    "A live audit session (30 min) where we diagnose your one biggest bottleneck"
+  ];
+
+  const whatMakesItUnrivalled = [
+    { title: "Personal, not generic", desc: "This isn't a stale PDF. It's custom-engineered for your staff, workflow, and revenue goals." },
+    { title: "Immediate actionability", desc: "You'll get tools and instructions you can deploy tomorrow." },
+    { title: "Risk-free", desc: "We never ask for contracts, credit cards, or commitments." },
+    { title: "Battle-tested", desc: "We've already reclaimed tens of thousands of hours for companies in travel, hospitality, clinics, ecommerce, and more." }
   ];
 
   return (
@@ -27,42 +33,81 @@ export const LeadMagnet = ({ onGetStarted }: LeadMagnetProps) => {
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/50 rounded-full px-6 py-3 mb-6 animate-glow-pulse">
                 <Gift className="w-5 h-5 text-primary" />
-                <span className="font-semibold text-primary">Limited Time Offer</span>
+                <span className="font-semibold text-primary">Yours 100% Free (Yes, free)</span>
               </div>
               
               <h2 className="text-4xl md:text-6xl font-bold mb-6">
-                Get Your Free
-                <span className="gradient-text"> Automation Blueprint</span>
+                The "Automation Freedom Blueprint"
               </h2>
               
-              <p className="text-xl text-muted-foreground mb-4 max-w-3xl mx-auto leading-relaxed">
-                We'll analyze your business and build a complete automation plan—showing exactly how to eliminate bottlenecks, automate workflows, and scale without hiring.
+              <p className="text-2xl text-foreground mb-6 font-semibold">
+                Unlock 10+ hours of your life. Zero fluff. Zero risk.
               </p>
               
-              <div className="text-3xl font-bold text-primary mb-2">$10,000 Value</div>
-              <div className="text-lg text-muted-foreground">Yours free. No strings attached.</div>
+              <p className="text-lg text-muted-foreground mb-4 max-w-3xl mx-auto leading-relaxed">
+                Here's what you're actually getting:
+              </p>
             </div>
             
             {/* What's included */}
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
+            <div className="space-y-4 mb-12">
               {included.map((item, index) => (
                 <div 
                   key={index} 
-                  className="flex items-start gap-3 animate-fade-in"
+                  className="flex items-start gap-3 animate-fade-in bg-secondary/30 border border-border rounded-lg p-4"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">{item}</span>
+                  <span className="text-foreground leading-relaxed">{item}</span>
                 </div>
               ))}
             </div>
             
-            {/* Why free */}
-            <div className="bg-secondary/50 border border-border rounded-xl p-6 mb-12">
-              <h3 className="text-xl font-bold mb-3">Why Would We Do This For Free?</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Simple: We're so confident in our ability to transform your operations that we're willing to prove it first. Once you see the roadmap, you'll understand why industry leaders choose JCAI. No risk on your end—just pure value.
+            {/* Why We Give It Away */}
+            <div className="bg-secondary/50 border border-primary/30 rounded-xl p-8 mb-8">
+              <h3 className="text-2xl font-bold mb-4">Why We Give It Away</h3>
+              <p className="text-foreground leading-relaxed text-lg">
+                Because once you see what's possible, most of our clients ask us to build it for them.
               </p>
+              <p className="text-muted-foreground leading-relaxed mt-3">
+                You keep the entire blueprint regardless — no strings, no obligations.
+              </p>
+            </div>
+            
+            {/* What Makes It Unrivalled */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold mb-6 text-center">What Makes It Unrivalled</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {whatMakesItUnrivalled.map((item, index) => (
+                  <div 
+                    key={index}
+                    className="bg-secondary/30 border border-border rounded-lg p-6 animate-fade-in"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <h4 className="text-lg font-bold text-primary mb-2">{item.title}</h4>
+                    <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Emotional Hook */}
+            <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/30 rounded-xl p-8 mb-12">
+              <h3 className="text-2xl font-bold mb-4">Imagine:</h3>
+              <div className="space-y-3 text-foreground">
+                <p className="leading-relaxed flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  No more patchwork automations that break
+                </p>
+                <p className="leading-relaxed flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  Your team doing higher-leverage work instead of grunt tasks
+                </p>
+                <p className="leading-relaxed flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  You having room to breathe — to strategize, focus on growth, live life
+                </p>
+              </div>
             </div>
             
             {/* CTA */}
@@ -71,13 +116,17 @@ export const LeadMagnet = ({ onGetStarted }: LeadMagnetProps) => {
                 variant="hero" 
                 size="xl"
                 onClick={onGetStarted}
-                className="group text-lg"
+                className="group text-xl px-16 h-16 mb-4"
               >
                 Claim Your Free Blueprint Now
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
               
-              <p className="text-sm text-muted-foreground mt-6">
+              <p className="text-base text-primary font-semibold mb-2">
+                Spaces are limited — because we can't deliver custom roadmaps to everyone
+              </p>
+              
+              <p className="text-sm text-muted-foreground">
                 Takes 2 minutes to complete • Delivered within 48 hours • Zero commitment
               </p>
             </div>
