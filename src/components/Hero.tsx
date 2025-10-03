@@ -11,7 +11,7 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
-      <div 
+      <div
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url(${heroBg})`,
@@ -39,12 +39,17 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
           
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-            The Agency Founder's Bottleneck Eliminator: Get Your Custom 3-Step Automation Plan in Under 60 Seconds.
+            Unlock 10+ Hours
+            <br />
+            <span className="gradient-text">Weekly.</span>
           </h1>
           
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Stop wasting 30+ hours a week on manual tasks. Our free AI audit instantly pinpoints your most expensive inefficiency and shows you exactly how to fix it.
+          <p className="text-2xl md:text-3xl text-foreground mb-4 max-w-3xl mx-auto leading-tight font-bold">
+            The AI Automation Freedom Blueprint
+          </p>
+          <p className="text-xl md:text-2xl text-primary mb-8 max-w-3xl mx-auto font-semibold">
+            Yours 100% Free (Yes, Free)
           </p>
           
           {/* CTA Buttons */}
@@ -55,11 +60,11 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
               onClick={onGetStarted}
               className="group text-xl px-16 h-16 animate-glow-pulse"
             >
-              Start My Free Audit
+              Claim Your Free Blueprint Now
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <p className="text-sm text-muted-foreground">
-              Trusted by leaders at [Client Logo 1] [Client Logo 2] [Client Logo 3]
+            <p className="text-xs text-muted-foreground">
+              No contracts • No credit cards • No commitments
             </p>
           </div>
         </div>
