@@ -1,25 +1,28 @@
+// src/pages/Index.tsx
 import { useState } from "react";
 import { Hero } from "@/components/Hero";
 import { ValueStack } from "@/components/ValueStack";
 import { WhyFree } from "@/components/WhyFree";
 import { SocialProof } from "@/components/SocialProof";
 import { LeadMagnet } from "@/components/LeadMagnet";
-import { SignupForm } from "@/components/SignupForm";
 import { Footer } from "@/components/Footer";
+import { AutomationAudit } from "@/components/AutomationAudit";
+import { PainAgitation } from "@/components/PainAgitation";
 
 const Index = () => {
-  const [showForm, setShowForm] = useState(false);
+  const [showAudit, setShowAudit] = useState(false);
 
   return (
     <main className="min-h-screen">
-      <Hero onGetStarted={() => setShowForm(true)} />
-      <ValueStack onGetStarted={() => setShowForm(true)} />
+      <Hero onGetStarted={() => setShowAudit(true)} />
+      <PainAgitation />
+      <ValueStack onGetStarted={() => setShowAudit(true)} />
       <WhyFree />
       <SocialProof />
-      <LeadMagnet onGetStarted={() => setShowForm(true)} />
+      <LeadMagnet onGetStarted={() => setShowAudit(true)} />
       <Footer />
       
-      {showForm && <SignupForm onClose={() => setShowForm(false)} />}
+      {showAudit && <AutomationAudit onClose={() => setShowAudit(false)} />}
     </main>
   );
 };
