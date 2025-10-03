@@ -1,3 +1,4 @@
+// src/components/SocialProof.tsx
 import { Card } from "@/components/ui/card";
 import { Quote, TrendingUp, Clock, DollarSign } from "lucide-react";
 
