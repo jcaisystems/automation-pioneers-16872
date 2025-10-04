@@ -1,6 +1,7 @@
 // src/components/Hero.tsx
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap } from "lucide-react";
+import { CountdownTimer } from "@/components/CountdownTimer";
 import heroBg from "@/assets/hero-bg.jpg";
 
 interface HeroProps {
@@ -31,10 +32,9 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
       {/* Content */}
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-5xl mx-auto text-center animate-fade-in">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-4 py-2 mb-8 animate-float">
-            <Zap className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-foreground">Trusted by Industry Leaders</span>
+          {/* Countdown Timer */}
+          <div className="mb-8 animate-scale-in-bounce">
+            <CountdownTimer />
           </div>
           
           {/* Main Headline */}

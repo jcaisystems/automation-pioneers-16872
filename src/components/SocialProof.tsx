@@ -1,26 +1,36 @@
 // src/components/SocialProof.tsx
 import { Card } from "@/components/ui/card";
-import { Quote, TrendingUp, Clock, DollarSign } from "lucide-react";
+import { Star, TrendingUp, Clock, DollarSign } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export const SocialProof = () => {
   const testimonials = [
     {
       quote: "Working with JCAI wasn't just an improvement—it was a transformation. We reclaimed 15+ hours weekly of administrative time. Our lead conversion increased 30% in just two months.",
-      author: "Anna M.",
+      author: "Anna Martinez",
       role: "Freelance Consultant",
-      metric: "30% conversion lift"
+      rating: 5,
+      date: "2 weeks ago",
+      initials: "AM",
+      avatar: ""
     },
     {
       quote: "I can finally take a vacation without my phone glued to my hand. The AI handles client inquiries, schedules meetings, and keeps operations running. It's like having a COO that never sleeps.",
-      author: "Marcus T.",
+      author: "Marcus Thompson",
       role: "Agency Owner",
-      metric: "24/7 coverage"
+      rating: 5,
+      date: "1 month ago",
+      initials: "MT",
+      avatar: ""
     },
     {
       quote: "We were spending $8K monthly on contractors for tasks our AI now handles automatically. ROI was positive within 6 weeks. Best investment we've made.",
-      author: "Sarah K.",
+      author: "Sarah Kim",
       role: "E-commerce Director",
-      metric: "6-week payback"
+      rating: 5,
+      date: "3 weeks ago",
+      initials: "SK",
+      avatar: ""
     }
   ];
 
@@ -55,22 +65,39 @@ export const SocialProof = () => {
           ))}
         </div>
         
-        {/* Testimonials */}
+        {/* Testimonials - Google Review Style */}
         <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
-              className="p-6 bg-gradient-to-br from-card to-card/50 border-border hover:border-primary/50 transition-all duration-300 animate-slide-up"
+              className="p-6 bg-card border-border hover:border-primary/30 transition-all duration-300 animate-slide-up"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <Quote className="w-6 h-6 text-primary mb-3" />
-              <p className="text-foreground mb-4 leading-relaxed text-sm italic">"{testimonial.quote}"</p>
-              <div className="border-t border-border pt-3">
-                <div className="font-semibold text-foreground text-sm">{testimonial.author}</div>
-                <div className="text-xs text-muted-foreground mb-2">{testimonial.role}</div>
-                <div className="bg-primary/10 border border-primary/30 rounded px-2 py-1 inline-block">
-                  <span className="text-primary font-semibold text-xs">{testimonial.metric}</span>
+              <div className="flex items-start gap-4 mb-4">
+                <Avatar className="w-12 h-12 border-2 border-primary/30">
+                  <AvatarImage src={testimonial.avatar} alt={testimonial.author} />
+                  <AvatarFallback className="bg-primary/20 text-primary font-semibold">
+                    {testimonial.initials}
+                  </AvatarFallback>
+                </Avatar>
+                <div className="flex-1">
+                  <div className="font-semibold text-foreground">{testimonial.author}</div>
+                  <div className="text-xs text-muted-foreground">{testimonial.date}</div>
                 </div>
+              </div>
+              
+              <div className="flex items-center gap-1 mb-3">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                ))}
+              </div>
+              
+              <p className="text-foreground leading-relaxed text-sm mb-3">
+                {testimonial.quote}
+              </p>
+              
+              <div className="text-xs text-muted-foreground pt-2 border-t border-border">
+                {testimonial.role}
               </div>
             </Card>
           ))}

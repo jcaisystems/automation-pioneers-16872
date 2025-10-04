@@ -96,13 +96,19 @@ export default {
         },
         "wave-glow": {
           "0%": {
-            boxShadow: "0 0 20px hsl(195 100% 50% / 0.2), inset 0 0 20px hsl(195 100% 50% / 0.1)",
+            boxShadow: "0 0 20px hsl(195 100% 50% / 0.3), 0 0 40px hsl(195 100% 50% / 0.2), 0 0 60px hsl(195 100% 50% / 0.1)",
+          },
+          "25%": {
+            boxShadow: "0 0 30px hsl(195 100% 50% / 0.4), 0 0 60px hsl(195 100% 50% / 0.3), 0 0 90px hsl(195 100% 50% / 0.2)",
           },
           "50%": {
-            boxShadow: "0 0 40px hsl(195 100% 50% / 0.4), inset 0 0 30px hsl(195 100% 50% / 0.2)",
+            boxShadow: "0 0 40px hsl(195 100% 50% / 0.5), 0 0 80px hsl(195 100% 50% / 0.4), 0 0 120px hsl(195 100% 50% / 0.3)",
+          },
+          "75%": {
+            boxShadow: "0 0 30px hsl(195 100% 50% / 0.4), 0 0 60px hsl(195 100% 50% / 0.3), 0 0 90px hsl(195 100% 50% / 0.2)",
           },
           "100%": {
-            boxShadow: "0 0 20px hsl(195 100% 50% / 0.2), inset 0 0 20px hsl(195 100% 50% / 0.1)",
+            boxShadow: "0 0 20px hsl(195 100% 50% / 0.3), 0 0 40px hsl(195 100% 50% / 0.2), 0 0 60px hsl(195 100% 50% / 0.1)",
           },
         },
         "float": {
@@ -152,7 +158,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
         "slide-up": "slide-up 0.6s ease-out",
-        "wave-glow": "wave-glow 3s ease-in-out infinite",
+        "wave-glow": "wave-glow 4s ease-in-out infinite",
         "float": "float 3s ease-in-out infinite",
         "scale-in-bounce": "scale-in-bounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)",
         "slide-in-left": "slide-in-left 0.6s ease-out",
