@@ -50,8 +50,8 @@ export const WhyFree = () => {
           {reasons.map((reason, index) => (
             <Card 
               key={index}
-              className="p-8 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="p-8 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 animate-scale-in-bounce hover:scale-105"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <reason.icon className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-2xl font-bold mb-3">{reason.title}</h3>

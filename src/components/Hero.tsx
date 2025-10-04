@@ -32,7 +32,7 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-5xl mx-auto text-center animate-fade-in">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-4 py-2 mb-8 animate-glow-pulse">
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-4 py-2 mb-8 animate-float">
             <Zap className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-foreground">Trusted by Industry Leaders</span>
           </div>
@@ -58,7 +58,7 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
               variant="hero" 
               size="xl"
               onClick={onGetStarted}
-              className="group text-xl px-16 h-16 animate-glow-pulse"
+              className="group text-xl px-16 h-16 animate-wave-glow"
             >
               Claim Your Free Blueprint Now
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />

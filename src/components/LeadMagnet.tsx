@@ -26,7 +26,7 @@ export const LeadMagnet = ({ onGetStarted }: LeadMagnetProps) => {
         <Card className="max-w-5xl mx-auto bg-gradient-to-br from-card via-card to-primary/5 border-2 border-primary/50 shadow-2xl shadow-primary/30 overflow-hidden">
           <div className="p-8 md:p-16">
             <div className="text-center mb-8">
-              <div className="inline-flex items-center gap-2 bg-destructive/20 border border-destructive/50 rounded-full px-4 py-2 mb-6 animate-glow-pulse">
+              <div className="inline-flex items-center gap-2 bg-destructive/20 border border-destructive/50 rounded-full px-4 py-2 mb-6 animate-scale-in-bounce">
                 <Target className="w-4 h-4 text-destructive" />
                 <span className="text-sm font-medium text-destructive">⚠️ Only 7 Spots Left This Month</span>
               </div>
@@ -47,7 +47,7 @@ export const LeadMagnet = ({ onGetStarted }: LeadMagnetProps) => {
                 variant="hero" 
                 size="xl"
                 onClick={onGetStarted}
-                className="group text-xl px-16 h-16 mb-4 animate-glow-pulse"
+                className="group text-xl px-16 h-16 mb-4 animate-wave-glow"
               >
                 Yes! Claim My Free Blueprint Now
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />

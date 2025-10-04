@@ -57,8 +57,8 @@ export const ValueStack = ({ onGetStarted }: ValueStackProps) => {
           {stackItems.map((item, index) => (
             <Card 
               key={index}
-              className="p-6 md:p-8 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 animate-slide-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="p-6 md:p-8 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 animate-slide-in-left hover:scale-105"
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
               <div className="flex items-start gap-4">
                 <CheckCircle2 className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
@@ -93,7 +93,7 @@ export const ValueStack = ({ onGetStarted }: ValueStackProps) => {
             variant="hero" 
             size="xl"
             onClick={onGetStarted}
-            className="group text-xl px-16 h-16 animate-glow-pulse"
+            className="group text-xl px-16 h-16 animate-wave-glow"
           >
             Yes! I Want My Free Blueprint
             <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
