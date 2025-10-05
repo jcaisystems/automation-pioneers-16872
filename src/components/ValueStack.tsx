@@ -93,16 +93,15 @@ export const ValueStack = ({ onGetStarted }: ValueStackProps) => {
             variant="hero" 
             size="xl"
             onClick={onGetStarted}
-            className="group text-xl px-16 h-16 animate-wave-glow"
+            className="group text-xl px-16 h-16 [animation:wave-glow_2s_ease-in-out_infinite]"
           >
             Yes! I Want My Free Blueprint
             <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <p className="text-sm text-destructive font-semibold mt-4">
-            ⚠️ Only 20 custom blueprints available this month
-          </p>
+          
         </div>
       </div>
     </section>
   );
 };
+

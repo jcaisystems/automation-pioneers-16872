@@ -2,13 +2,14 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Zap, Clock, ArrowRight, Target } from "lucide-react";
-import { CountdownTimer } from "@/components/CountdownTimer";
+import { LiveUrgency } from "./LiveUrgency";
 
 interface LeadMagnetProps {
   onGetStarted: () => void;
+  spotsLeft: number;
 }
 
-export const LeadMagnet = ({ onGetStarted }: LeadMagnetProps) => {
+export const LeadMagnet = ({ onGetStarted, spotsLeft }: LeadMagnetProps) => {
   const quickWins = [
     { icon: Zap, title: "10+ Hours Saved", description: "Every single week" },
     { icon: Target, title: "Custom Built", description: "For your business" },
@@ -27,10 +28,6 @@ export const LeadMagnet = ({ onGetStarted }: LeadMagnetProps) => {
         <Card className="max-w-5xl mx-auto bg-gradient-to-br from-card via-card to-primary/5 border-2 border-primary/50 shadow-2xl shadow-primary/30 overflow-hidden">
           <div className="p-8 md:p-16">
             <div className="text-center mb-8">
-              <div className="mb-6 animate-scale-in-bounce">
-                <CountdownTimer />
-              </div>
-              
               <h2 className="text-4xl md:text-6xl font-bold mb-6">
                 Ready to Get Your
                 <span className="gradient-text"> 10+ Hours Back?</span>
@@ -39,15 +36,19 @@ export const LeadMagnet = ({ onGetStarted }: LeadMagnetProps) => {
               <p className="text-2xl text-foreground font-semibold mb-4">
                 Claim Your Automation Freedom Blueprint
               </p>
-              <p className="text-xl text-muted-foreground mb-8">
+               <p className="text-xl text-muted-foreground mb-8">
                 Custom-built for your business. Delivered in 48 hours or less.
               </p>
+
+              <div className="flex justify-center my-8">
+                <LiveUrgency spotsLeft={spotsLeft} />
+              </div>
 
               <Button 
                 variant="hero" 
                 size="xl"
                 onClick={onGetStarted}
-                className="group text-xl px-16 h-16 mb-4 animate-wave-glow"
+                className="group text-xl px-16 h-16 mb-4 [animation:wave-glow_2s_ease-in-out_infinite]"
               >
                 Yes! Claim My Free Blueprint Now
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
@@ -86,3 +87,4 @@ export const LeadMagnet = ({ onGetStarted }: LeadMagnetProps) => {
     </section>
   );
 };
+

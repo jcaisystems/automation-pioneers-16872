@@ -1,21 +1,21 @@
 // src/components/Hero.tsx
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Zap } from "lucide-react";
-import { CountdownTimer } from "@/components/CountdownTimer";
-import heroBg from "@/assets/hero-bg.jpg";
+import { ArrowRight } from "lucide-react";
+import { LiveUrgency } from "./LiveUrgency";
 
 interface HeroProps {
   onGetStarted: () => void;
+  spotsLeft: number;
 }
 
-export const Hero = ({ onGetStarted }: HeroProps) => {
+export const Hero = ({ onGetStarted, spotsLeft }: HeroProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url(${heroBg})`,
+          backgroundImage: `url('https://raw.githubusercontent.com/jcaisystem/automation-pioneers-16872/main/src/assets/hero-bg.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0.15
@@ -25,17 +25,13 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
       
       {/* Grid overlay */}
       <div className="absolute inset-0 z-0" style={{
-        backgroundImage: 'linear-gradient(rgba(0,191,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,191,255,0.1) 1px, transparent 1px)',
+        backgroundImage: 'linear-gradient(rgba(0,191,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,191,255,0.05) 1px, transparent 1px)',
         backgroundSize: '50px 50px'
       }} />
       
       {/* Content */}
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-5xl mx-auto text-center animate-fade-in">
-          {/* Countdown Timer */}
-          <div className="mb-8 animate-scale-in-bounce">
-            <CountdownTimer />
-          </div>
           
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
@@ -52,13 +48,18 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
             Yours 100% Free (Yes, Free)
           </p>
           
+          {/* Urgency Counter */}
+          <div className="mb-10 flex justify-center">
+             <LiveUrgency spotsLeft={spotsLeft} />
+          </div>
+          
           {/* CTA Buttons */}
           <div className="flex flex-col gap-4 justify-center items-center">
             <Button 
               variant="hero" 
               size="xl"
               onClick={onGetStarted}
-              className="group text-xl px-16 h-16 animate-wave-glow"
+              className="group text-xl px-16 h-16 [animation:wave-glow_2s_ease-in-out_infinite]"
             >
               Claim Your Free Blueprint Now
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
@@ -72,3 +73,4 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
     </section>
   );
 };
+
