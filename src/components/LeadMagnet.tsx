@@ -52,7 +52,7 @@ export const LeadMagnet = ({ onGetStarted, spotsLeft }: LeadMagnetProps) => {
                 variant="hero" 
                 size="xl"
                 onClick={onGetStarted}
-                className="group text-xl px-16 h-16 rounded-none animation:wave-glow_2s_ease-in-out_infinite"
+                className="group w-full px-16 h-16 rounded-none animation:wave-glow_2s_ease-in-out_infinite"
               >
                 Yes! Claim My Free Blueprint Now
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
