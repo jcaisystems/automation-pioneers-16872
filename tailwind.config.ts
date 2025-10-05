@@ -151,7 +151,6 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
         "slide-up": "slide-up 0.6s ease-out",
-        "wave-glow": "wave-glow 20s ease-in-out infinite",
         "float": "float 3s ease-in-out infinite",
         "scale-in-bounce": "scale-in-bounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)",
         "slide-in-left": "slide-in-left 0.6s ease-out",
