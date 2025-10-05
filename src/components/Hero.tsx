@@ -59,7 +59,7 @@ export const Hero = ({ onGetStarted, spotsLeft }: HeroProps) => {
               variant="hero" 
               size="xl"
               onClick={onGetStarted}
-              className="group text-xl px-16 h-16 rounded-none animate-wave-glow"
+              className="group text-xl px-16 h-16 rounded-none [animation:wave-glow_2s_ease-in-out_infinite]"
             >
               Claim Your Free Blueprint Now
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
